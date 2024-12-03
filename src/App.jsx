@@ -83,7 +83,7 @@ const App = () => {
     } else {
       setSubmittedData({
         ...submittedData,
-        [formType]: [...submittedData[formType], { ...formData, id: Date.now() }],
+        [formType]: [...submittedData[formType], { ...formData, id: Date.now() }], 
       });
       setMessage('Form submitted successfully!');
     }
@@ -118,7 +118,7 @@ const App = () => {
 
   const renderTable = (formType) => {
     return (
-      <div className="submitted-data-section mt-5">
+      <div className="submitted-data-section mt-5 ">
         <h3 className="mt-4 mb-3" style={{ color: "#E08600" }}>{formType}</h3>
         <table className="table table-bordered">
           <thead>
@@ -158,7 +158,7 @@ const App = () => {
   };
 
   return (
-    <div className="container mt-4 w-50 form-container">
+    <div className="container mt-4 form-container w-50">
       <h1 className="text-center">
         <span style={{ color: "#763A12" }}>User</span>
         <span style={{ color: "#E08600" }}> Form</span>
@@ -240,16 +240,10 @@ const App = () => {
           {submittedData['User Information'].length > 0 && renderTable('User Information')}
           {submittedData['Address Information'].length > 0 && renderTable('Address Information')}
           {submittedData['Payment Information'].length > 0 && renderTable('Payment Information')}
-        </>
-      )}
-
-      {/* Go back button to add more details */}
-      {!formVisible && (
-        <div className="mt-5 text-center">
-          <button className="btn btn-secondary" onClick={handleGoBack}>
+          <button onClick={handleGoBack} className="btn w-25 mt-4" style={{ backgroundColor: '#AA4C0A', color: 'white' }}>
             Go Back
           </button>
-        </div>
+        </>
       )}
     </div>
   );
