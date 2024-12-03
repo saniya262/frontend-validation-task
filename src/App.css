@@ -1,0 +1,23 @@
+
+.container {
+  margin-top: 20px;
+}
+
+.form-container {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+}
+
+input::placeholder, 
+textarea::placeholder, 
+select::placeholder {
+  color: #763A12 !important; 
+  opacity: 1; 
+}
+
+
